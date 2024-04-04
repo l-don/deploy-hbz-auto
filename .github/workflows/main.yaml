@@ -18,11 +18,11 @@ jobs:
           node-version: 20
 
       - name: Build Angular app to prod
-        working-directory: deploy-hbz-auto
+        working-directory: auto-deploy-app
         run: npm install && npm run build:prod
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
           folder: auto-deploy-app/dist/browser
           branch: prod
